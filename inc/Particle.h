@@ -13,7 +13,7 @@ public:
     *the measurement from the sensor.
     *@param measurement
     */
-    void computeWeight(const double *measurement);
+    void computeWeight(const double *measurement, uint32_t length);
     /*
     *Get the particle weight.
     */
@@ -36,6 +36,14 @@ public:
     *Definition of an assignment operator.
     */
     Particle &operator=(Particle &p);
+
+    /*
+    Calculate p hit, p_short, p_max and p_rand
+    */
+    double Particle::p_hit(const double& measurement, const double& predict_measurement);
+    double Particle::p_short(const double& measurement, const double& predict_measurement);
+    double Particle::p_max(const double& measurement);
+    double Particle::p_rand(const double& measurement);
 
 private:
     double _weight;

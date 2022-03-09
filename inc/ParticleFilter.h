@@ -4,6 +4,8 @@
 #include <vector>
 #include <random>
 
+using std::vector;
+
 class ParticleFilter
 {
 public:
@@ -40,7 +42,20 @@ public:
     *@param measurement a sensor measurement entries
     *@param length the number of measurement entries
     */
-    void filter(double dx, double dy, double dYaw, const double *measurement, uint32_t lengh);
+    void filter(double dx, double dy, double dYaw, const double *measurement, uint32_t length, vector<double> &gt);
+
+    /*
+    * Num of particles 
+    */
+    const uint32_t NUM_OF_PARTICLES = 10000;
+
+    /*
+    * Motion model parameters
+    */
+    //static constexpr double ALPHA_1 = 0.01;
+    //static constexpr double ALPHA_2 = 0.01;
+    //static constexpr double ALPHA_3 = 0.1;
+    //static constexpr double ALPHA_4 = 0.1;
 
 private:
     /*
