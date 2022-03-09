@@ -24,7 +24,7 @@ const double *Sensor::doMeasurement()
         doRaytracingFast(_sensorPosX, _sensorPosY, th, _measurement[i]);
         th += ANGULAR_RESOLUTION;
     }
-
+    
     return _measurement;
 }
 

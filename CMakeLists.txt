@@ -38,5 +38,5 @@ include_directories(
    ${CMAKE_CURRENT_SOURCE_DIR}/inc
 )
 
-add_executable(ParticleFilter ${HEADERS} ${SOURCE})
+add_executable(ParticleFilter ${HEADERS} ${SOURCE} )
 
